@@ -1,0 +1,18 @@
+{% extends "pages/base.html" %}
+{% load static %}
+
+{% block extra_css %}
+<link rel="stylesheet" href="{% static 'css/projects.css' %}">
+{% endblock %}
+
+{% block title %}Projects{% endblock %}
+
+{% block content %}
+    <h2>Projects</h2>
+    <div class="projects-container">
+        <h3>Project Title</h3>
+        <img src="https://picsum.photos/200/200" alt="Project placeholder" class="project-image">
+        <p>Project description goes here. This is a brief overview of the project, its purpose, and any relevant details.</p>
+        <p>Skills used: HTML, CSS, JavaScript</p>
+    </div>
+{% endblock %}
