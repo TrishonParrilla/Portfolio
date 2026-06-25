@@ -10,6 +10,12 @@ body {
 	min-height: 100vh;
 }
 
+.site-body {
+	display: flex;
+	flex-direction: column;
+	min-height: 100vh;
+}
+
 .site-header {
 	background-color: rgba(0, 0, 0, 0.6);
 	border-bottom: 2px solid rgba(255, 255, 255, 0.3);
@@ -40,6 +46,7 @@ body {
 }
 
 .nav-links a {
+	display: inline-block;
 	text-decoration: none;
 	color: #ffff;
 	font-weight: 500;
@@ -49,12 +56,27 @@ body {
 
 .nav-links a:hover {
 	color: #ffcc00;
+	transform: scale(1.08);
 
 }
 
-.main-content,
-.site-footer {
+.main-content {
+	flex: 1;
+	width: 100%;
 	max-width: 1000px;
 	margin: 0 auto;
 	padding: 1rem;
+}
+
+.site-footer {
+	width: 100%;
+	margin-top: auto;
+	padding: 0.9rem 1rem;
+	text-align: center;
+	background-color: rgba(0, 0, 0, 0.6);
+	border-top: 2px solid rgba(255, 255, 255, 0.2);
+}
+
+.site-footer p {
+	margin: 0;
 }

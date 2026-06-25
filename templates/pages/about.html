@@ -11,11 +11,16 @@
 {% block content %}
 
 <section class="about-section">
-    <h1>About Me</h1>
-    <img class="profile-img" src="{% static 'img/ProfileGunther.jpeg' %}" alt="Profile Picture">
-    <div class="about-text">
-        <p>Hello! My name is Trishon Parrilla, and I am a passionate web developer with a strong interest in creating dynamic and user-friendly web applications.
-            I enjoy learning new frameworks and tools to enhance my development skills and stay up-to-date with the latest industry trends.</p>
+    <h1 class="about-title">About Me</h1>
+    <div class="about-content">
+        <div class="about-top">
+            <img class="profile-img" src="{% static 'img/ProfileGunther.jpeg' %}" alt="Profile Picture">
+            <div class="role-box">Fullstack developer</div>
+        </div>
+        <div class="about-text">
+            <p>Hello! My name is Trishon Parrilla, and I am a passionate web developer with a strong interest in creating dynamic and user-friendly web applications.
+                I enjoy learning new frameworks and tools to enhance my development skills and stay up-to-date with the latest industry trends.</p>
+        </div>
     </div>
 </section>
 

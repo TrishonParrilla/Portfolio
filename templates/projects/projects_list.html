@@ -1,7 +1,28 @@
 {% extends 'pages/base.html' %}
-
+{% load static %}
 {% block title %}Projects{% endblock %}
+{% block extra_css %}
+<link rel="stylesheet" href="{% static 'css/projects.css' %}">
+{% endblock %}
 
 {% block content %}
-    <h1>Projects</h1>
+
+    <h2>Projects</h2>
+    <div class="projects-main-container">
+        {% for project in projects %}
+                <div class="projects-container">
+                    <a class="project-link" href="{{ project.repository_link }}" target="_blank">
+                        <h3 class="project-title">{{ project.name }}</h3>
+                        <img class="project-image" src="{{ project.image.url }}" alt="{{ project.title }}">
+                    </a>
+                    <div class="project-content">
+                        <p>{{ project.description }}</p>
+
+                        {% for skill in project.skills.all %}
+                            <p>{{ skill.name }}</p>
+                        {% endfor %}
+                    </div>
+                </div>
+        {% endfor %}
+    </div>
 {% endblock %}
