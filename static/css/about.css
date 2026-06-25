@@ -1,3 +1,14 @@
+.tabs {
+    display: flex;
+    flex-wrap: nowrap;
+    align-items: flex-end;
+    gap: 0;
+    position: relative;
+    top: 1px;
+    overflow: visible;
+    isolation: isolate;
+}
+
 .about-section{
     display: flex;
     flex-direction:column;
@@ -9,50 +20,126 @@
 }
 
 .about-content {
-    transition: transform 0.4s ease;
+    transition: transform 0.3s ease-out;
     transform-origin: left top;
+    will-change: transform;
 }
 
-.about-title {
-    transition: transform 0.4s ease;
+.tabs h1 {
+    transition: transform 0.25s ease-out, padding 0.2s ease-out;
     transform-origin: left bottom;
+    position: relative;
+    z-index: 1;
+    will-change: transform;
+    box-sizing: border-box;
+    
+}
+
+.tabs h1 + h1 {
+    margin-left: -0.55ch;
 }
 
 .profile-img,
 .role-box {
-    transition: transform 0.4s ease, color 0.4s ease;
+    transition: transform 0.3s ease-out, color 0.3s ease-out;
 }
 
-.about-section:hover .about-content {
-    transform: scale(1.02);
+.tabs:has(h1:hover) + .about-content,
+.about-content:hover {
+    transform: scale(1.015);
+    
 }
 
-.about-section:hover .about-title {
-    transform: scale(1.02);
+.tabs h1:hover {
+    z-index: 12;
+    color:#ffcc00;
+    cursor:pointer;
+    padding-top: calc(0.1em + 2px);
+    padding-bottom: calc(0.1em + 1px);
 }
 
-.about-section:hover .about-content .profile-img,
-.about-section:hover .about-content .role-box {
-    transform: scale(1.05);
+.tabs:not(:has(h1:hover)) .about-title {
+    z-index: 30;
+    transform: scale(1.03);
 }
 
-.about-section:hover .about-content .role-box {
+.tabs:not(:has(h1:hover)) .experience-title {
+    z-index: 3;
+}
+
+.tabs:not(:has(h1:hover)) .projects-title {
+    z-index: 2;
+}
+
+.tabs:not(:has(h1:hover)) .contact-title {
+    z-index: 1;
+}
+
+.tabs h1:not(.about-title):hover {
+    transform: translateX(0.4ch) scale(1.03);
+}
+
+.tabs:has(.experience-title:hover) .projects-title {
+    z-index: 11;
+}
+
+.tabs:has(.experience-title:hover) .contact-title {
+    z-index: 10;
+}
+
+.tabs:has(h1:hover) + .about-content .profile-img,
+.tabs:has(h1:hover) + .about-content .role-box,
+.about-content:hover .profile-img,
+.about-content:hover .role-box {
+    transform: scale(1.03);
+}
+
+.tabs:has(h1:hover) + .about-content .role-box,
+.about-content:hover .role-box {
     color: #ffcc00;
 }
-.about-title{
+.about-title {
     font-size:1.6rem;
     background-color: rgba(0, 0, 0, 0.3);
     backdrop-filter: blur(5px);
-    width:fit-content;
-    padding:0.1em 0.3em;
+    width: fit-content;
+    padding: 0.1em 0.35em;
     margin: 0;
-    outline: 1px solid rgba(255, 255, 255, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.1);
     border-bottom: none;
     border-top-left-radius: 10px;
     border-top-right-radius: 10px;
     position: relative;
-    top: 1px;
-    align-self: flex-start;
+    top: -2px;
+    z-index: 30;
+    transform: scale(1.03);
+}
+
+ .experience-title, .projects-title, .contact-title {
+    font-size:1.3rem;
+    background-color: rgba(0, 0, 0, 0.3);
+    backdrop-filter: blur(5px);
+    width: fit-content;
+    padding: 0.1em 0.35em;
+    margin: 0;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-bottom: none;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    position: relative;
+    z-index: 1;
+}
+
+.experience-title {
+    z-index: 3;
+}
+
+.projects-title {
+    z-index: 2;
+}
+
+.contact-title {
+    z-index: 1;
 }
 .about-content {
     display: flex;
