@@ -6,6 +6,10 @@
     align-items: flex-start;
 }
 
+.about-page {
+    transition: transform 0.55s ease-out;
+}
+
 .profile-img,
 .role-box {
     transition: transform 0.3s ease-out, color 0.3s ease-out;

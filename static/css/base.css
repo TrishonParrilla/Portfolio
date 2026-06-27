@@ -187,52 +187,80 @@ body {
 	z-index: 1;
 }
 
-.folder-tabs:has(.experience-title:hover) .projects-title {
-	z-index: 21;
-}
-
-.folder-tabs:has(.experience-title:hover) .contact-title {
-	z-index: 10;
-}
-
-.folder-tabs:has(.projects-title:hover) .about-title {
-	z-index: 11;
-}
-
-.folder-tabs:has(.projects-title:hover) .experience-title {
-	z-index: 10;
-}
-
-.folder-tabs:has(.projects-title:hover) .projects-title {
-	z-index: 50;
-}
-
-.folder-tabs:has(.contact-title:hover) .about-title {
-	z-index: 11;
-}
-
-.folder-tabs:has(.contact-title:hover) .experience-title {
-	z-index: 10;
-}
-
-.folder-tabs:has(.contact-title:hover) .contact-title {
+.folder-tabs:has(.folder-tab:hover) .folder-tab:hover {
 	z-index: 50;
 }
 
 .folder-tabs:has(.folder-tab:hover) .is-active:not(:hover) {
+	z-index: 25;
+}
+
+/* About active: About > Experience > Projects > Contact */
+.folder-tabs:has(.about-title.is-active) .about-title {
+	z-index: 30;
+}
+
+.folder-tabs:has(.about-title.is-active) .experience-title {
 	z-index: 20;
 }
 
-.folder-tabs:has(.folder-tab:hover) .folder-tab:not(:hover):not(.is-active) {
-	z-index: 1;
-}
-
-.folder-tabs:has(.experience-title:hover) .projects-title:not(:hover) {
-	z-index: 21;
-}
-
-.folder-tabs:has(.experience-title:hover) .contact-title:not(:hover) {
+.folder-tabs:has(.about-title.is-active) .projects-title {
 	z-index: 10;
+}
+
+.folder-tabs:has(.about-title.is-active) .contact-title {
+	z-index: 5;
+}
+
+/* Experience active: Experience > About > Projects > Contact */
+.folder-tabs:has(.experience-title.is-active) .experience-title {
+	z-index: 30;
+}
+
+.folder-tabs:has(.experience-title.is-active) .about-title {
+	z-index: 20;
+}
+
+.folder-tabs:has(.experience-title.is-active) .projects-title {
+	z-index: 10;
+}
+
+.folder-tabs:has(.experience-title.is-active) .contact-title {
+	z-index: 5;
+}
+
+/* Projects active: Projects > About > Experience > Contact */
+.folder-tabs:has(.projects-title.is-active) .projects-title {
+	z-index: 30;
+}
+
+.folder-tabs:has(.projects-title.is-active) .about-title {
+	z-index: 20;
+}
+
+.folder-tabs:has(.projects-title.is-active) .experience-title {
+	z-index: 10;
+}
+
+.folder-tabs:has(.projects-title.is-active) .contact-title {
+	z-index: 5;
+}
+
+/* Contact active: Contact > About > Experience > Projects */
+.folder-tabs:has(.contact-title.is-active) .contact-title {
+	z-index: 30;
+}
+
+.folder-tabs:has(.contact-title.is-active) .about-title {
+	z-index: 20;
+}
+
+.folder-tabs:has(.contact-title.is-active) .experience-title {
+	z-index: 10;
+}
+
+.folder-tabs:has(.contact-title.is-active) .projects-title {
+	z-index: 5;
 }
 
 .folder-page-panel {
