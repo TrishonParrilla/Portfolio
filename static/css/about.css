@@ -1,42 +1,9 @@
-.tabs {
-    display: flex;
-    flex-wrap: nowrap;
-    align-items: flex-end;
-    gap: 0;
-    position: relative;
-    top: 1px;
-    overflow: visible;
-    isolation: isolate;
-}
-
 .about-section{
     display: flex;
     flex-direction:column;
     text-align:start;
-    width: min(65%, 900px);
-    max-width: 100%;
-    margin: 2em auto 0;
-    align-items: center;
-}
-
-.about-content {
-    transition: transform 0.3s ease-out;
-    transform-origin: left top;
-    will-change: transform;
-}
-
-.tabs h1 {
-    transition: transform 0.25s ease-out, padding 0.2s ease-out;
-    transform-origin: left bottom;
-    position: relative;
-    z-index: 1;
-    will-change: transform;
-    box-sizing: border-box;
-    
-}
-
-.tabs h1 + h1 {
-    margin-left: -0.55ch;
+    width: 100%;
+    align-items: flex-start;
 }
 
 .profile-img,
@@ -44,133 +11,17 @@
     transition: transform 0.3s ease-out, color 0.3s ease-out;
 }
 
-.tabs:has(h1:hover) + .about-content,
-.about-content:hover {
+.about-page:hover {
     transform: scale(1.015);
-    
 }
 
-.tabs h1:hover {
-    z-index: 12;
-    color:#ffcc00;
-    cursor:pointer;
-    padding-top: calc(0.1em + 2px);
-    padding-bottom: calc(0.1em + 1px);
-}
-
-.tabs:not(:has(h1:hover)) .about-title {
-    z-index: 30;
+.about-page:hover .profile-img,
+.about-page:hover .role-box {
     transform: scale(1.03);
 }
 
-.tabs:not(:has(h1:hover)) .experience-title {
-    z-index: 3;
-}
-
-.tabs:not(:has(h1:hover)) .projects-title {
-    z-index: 2;
-}
-
-.tabs:not(:has(h1:hover)) .contact-title {
-    z-index: 1;
-}
-
-.tabs h1:not(.about-title):hover {
-    transform: translateX(0.4ch) scale(1.03);
-}
-
-.tabs:has(.experience-title:hover) .projects-title {
-    z-index: 11;
-}
-
-.tabs:has(.experience-title:hover) .contact-title {
-    z-index: 10;
-}
-
-.tabs:has(.projects-title:hover) .about-title {
-    z-index: 11;
-}
-
-.tabs:has(.projects-title:hover) .experience-title {
-    z-index: 10;
-}
-
-.tabs:has(.contact-title:hover) .about-title {
-    z-index: 11;
-}
-
-.tabs:has(.contact-title:hover) .experience-title {
-    z-index: 10;
-}
-
-.tabs:has(h1:hover) + .about-content .profile-img,
-.tabs:has(h1:hover) + .about-content .role-box,
-.about-content:hover .profile-img,
-.about-content:hover .role-box {
-    transform: scale(1.03);
-}
-
-.tabs:has(h1:hover) + .about-content .role-box,
-.about-content:hover .role-box {
+.about-page:hover .role-box {
     color: #ffcc00;
-}
-.about-title {
-    font-size:1.6rem;
-    background-color: rgba(0, 0, 0, 0.3);
-    backdrop-filter: blur(5px);
-    width: fit-content;
-    padding: 0.16em 0.35em 0.12em;
-    margin: 0;
-    border: 1px solid rgba(255, 255, 255, 0.1);
-    border-bottom: none;
-    border-top-left-radius: 10px;
-    border-top-right-radius: 10px;
-    position: relative;
-    top: -2px;
-    z-index: 30;
-    transform: scale(1.03);
-}
-
- .experience-title, .projects-title, .contact-title {
-    font-size:1.3rem;
-    background-color: rgba(0, 0, 0, 0.3);
-    backdrop-filter: blur(5px);
-    width: fit-content;
-    padding: 0.08em 0.35em 0.06em;
-    margin: 0;
-    border: 1px solid rgba(255, 255, 255, 0.1);
-    border-bottom: none;
-    border-top-left-radius: 10px;
-    border-top-right-radius: 10px;
-    position: relative;
-    z-index: 1;
-}
-
-.experience-title {
-    top: -1px;
-    z-index: 3;
-}
-
-.projects-title {
-    top: 0;
-    z-index: 2;
-}
-
-.contact-title {
-    top: 1px;
-    z-index: 1;
-}
-.about-content {
-    display: flex;
-    flex-direction: column;
-    width: 100%;
-    padding:3em;
-    background-color: rgba(0, 0, 0, 0.1);
-    backdrop-filter: blur(5px);
-    border-radius: 0 10px 10px 10px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.8);
-    outline: 1px solid rgba(255, 255, 255, 0.1);
-    margin-bottom: 2em;
 }
 
 .about-top {
@@ -219,15 +70,6 @@
 }
 
 @media (max-width: 700px) {
-    .about-section {
-        width: 100%;
-    }
-
-    .about-content {
-        width: 100%;
-        padding: 1.25rem;
-    }
-
     .about-top {
         flex-direction: column;
         align-items: flex-start;

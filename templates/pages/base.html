@@ -16,18 +16,22 @@
     <header class="site-header">
         <nav class="navbar">
             <h1 class="brand">Trishon Parrilla</h1>
-            <ul class="nav-links">
-                <li><a href="{% url 'about_me' %}">About Me</a></li>
-                <li><a href="{% url 'experience' %}">Experience</a></li>
-                <li><a href="{% url 'projects_list' %}">Projects</a></li>
-                <li><a href="{% url 'contact' %}">Contact</a></li>
-            </ul>
         </nav>
     </header>
 
     <main class="main-content">
-        {% block content %}
-        {% endblock %}
+        <section class="folder-page-shell">
+            <div class="folder-tabs" aria-label="Primary navigation">
+                <a class="folder-tab about-title{% if request.resolver_match.url_name == 'about_me' %} is-active{% endif %}" href="{% url 'about_me' %}">About Me</a>
+                <a class="folder-tab experience-title{% if request.resolver_match.url_name == 'experience' %} is-active{% endif %}" href="{% url 'experience' %}">Experience</a>
+                <a class="folder-tab projects-title{% if request.resolver_match.url_name == 'projects_list' %} is-active{% endif %}" href="{% url 'projects_list' %}">Projects</a>
+                <a class="folder-tab contact-title{% if request.resolver_match.url_name == 'contact' %} is-active{% endif %}" href="{% url 'contact' %}">Contact</a>
+            </div>
+            <div class="folder-page-panel {% block page_panel_class %}{% endblock %}">
+                {% block content %}
+                {% endblock %}
+            </div>
+        </section>
     </main>
     <footer class="site-footer">
         <p>2024 Trishon Parrilla</p>

@@ -8,24 +8,18 @@
 
 {% block title %}About Me{% endblock %}
 
+{% block page_panel_class %}about-page{% endblock %}
+
 {% block content %}
 
 <section class="about-section">
-    <div class="tabs">
-        <h1 class="about-title">About Me</h1>
-        <h1 class="experience-title">Experience</h1>
-        <h1 class="projects-title">Projects</h1>
-        <h1 class="contact-title">Contact</h1>
+    <div class="about-top">
+        <img class="profile-img" src="{% static 'img/ProfileGunther.jpeg' %}" alt="Profile Picture">
+        <div class="role-box">Fullstack developer</div>
     </div>
-    <div class="about-content">
-        <div class="about-top">
-            <img class="profile-img" src="{% static 'img/ProfileGunther.jpeg' %}" alt="Profile Picture">
-            <div class="role-box">Fullstack developer</div>
-        </div>
-        <div class="about-text">
-            <p>Hello! My name is Trishon Parrilla, and I am a passionate web developer with a strong interest in creating dynamic and user-friendly web applications.
-                I enjoy learning new frameworks and tools to enhance my development skills and stay up-to-date with the latest industry trends.</p>
-        </div>
+    <div class="about-text">
+        <p>Hello! My name is Trishon Parrilla, and I am a passionate web developer with a strong interest in creating dynamic and user-friendly web applications.
+            I enjoy learning new frameworks and tools to enhance my development skills and stay up-to-date with the latest industry trends.</p>
     </div>
 </section>
 
