@@ -43,6 +43,22 @@ body {
 	font-size: 1.25rem;
 }
 
+.brand-link {
+	color: inherit;
+	text-decoration: none;
+}
+
+.brand-link:visited,
+.brand-link:active {
+	color: inherit;
+	text-decoration: none;
+}
+
+.brand-link:hover {
+	color: #ffdf6b;
+	text-shadow: 0 0 18px rgba(255, 223, 107, 0.18);
+}
+
 .folder-page-shell {
 	width: min(100%, 900px);
 	margin: 2rem auto 0;
@@ -139,11 +155,15 @@ body {
 
 .folder-tab:hover {
 	z-index: 50;
-	color: #ffcc00;
 	cursor: pointer;
 	padding-top: calc(0.08em + 2px);
 	padding-bottom: calc(0.06em + 1px);
 	transform: translateX(0.4ch) scale(1.03);
+}
+
+.folder-tab:hover:not(.is-active) {
+	color: #ffdf6b;
+	text-shadow: 0 0 18px rgba(255, 223, 107, 0.18);
 }
 
 .folder-tabs .is-active {
