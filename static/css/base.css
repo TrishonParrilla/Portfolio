@@ -162,8 +162,8 @@ body {
 }
 
 .folder-tab:hover:not(.is-active) {
-	color: #ffdf6b;
-	text-shadow: 0 0 18px rgba(255, 223, 107, 0.18);
+	color: #e0b93f;
+	text-shadow: 0 0 18px rgba(224, 185, 63, 0.18);
 }
 
 .folder-tabs .is-active {
