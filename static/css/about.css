@@ -87,6 +87,22 @@
     z-index: 10;
 }
 
+.tabs:has(.projects-title:hover) .about-title {
+    z-index: 11;
+}
+
+.tabs:has(.projects-title:hover) .experience-title {
+    z-index: 10;
+}
+
+.tabs:has(.contact-title:hover) .about-title {
+    z-index: 11;
+}
+
+.tabs:has(.contact-title:hover) .experience-title {
+    z-index: 10;
+}
+
 .tabs:has(h1:hover) + .about-content .profile-img,
 .tabs:has(h1:hover) + .about-content .role-box,
 .about-content:hover .profile-img,
@@ -103,7 +119,7 @@
     background-color: rgba(0, 0, 0, 0.3);
     backdrop-filter: blur(5px);
     width: fit-content;
-    padding: 0.1em 0.35em;
+    padding: 0.16em 0.35em 0.12em;
     margin: 0;
     border: 1px solid rgba(255, 255, 255, 0.1);
     border-bottom: none;
@@ -120,7 +136,7 @@
     background-color: rgba(0, 0, 0, 0.3);
     backdrop-filter: blur(5px);
     width: fit-content;
-    padding: 0.1em 0.35em;
+    padding: 0.08em 0.35em 0.06em;
     margin: 0;
     border: 1px solid rgba(255, 255, 255, 0.1);
     border-bottom: none;
@@ -131,14 +147,17 @@
 }
 
 .experience-title {
+    top: -1px;
     z-index: 3;
 }
 
 .projects-title {
+    top: 0;
     z-index: 2;
 }
 
 .contact-title {
+    top: 1px;
     z-index: 1;
 }
 .about-content {
